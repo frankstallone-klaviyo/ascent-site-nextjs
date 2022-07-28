@@ -19,8 +19,8 @@ export default Page
 
 export async function getStaticProps({ params, previewData }) {
   const client = createClient({ previewData })
-  
-  const page = await client.getByUID('documentation_page', params.uid)
+    //   Ensure route is set up correctly in prismicio.js
+    const page = await client.getByUID('documentation_page', params.uid)
   
   return {
       props: {

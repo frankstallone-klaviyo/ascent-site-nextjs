@@ -1,5 +1,8 @@
 {
   "slices": {
     "PageHeader": {}
+  },
+  "_cts": {
+    "homepage": {}
   }
 }

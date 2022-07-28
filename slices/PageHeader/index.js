@@ -1,18 +1,18 @@
 import React from 'react'
-import { RichText } from '@prismicio/react'
+import { PrismicRichText } from '@prismicio/react'
 
 const PageHeader = ({ slice }) => (
   <section>
     <span className="title">
       {
         slice.primary.title ?
-        <RichText render={slice.primary.title}/>
+        <PrismicRichText field={slice.primary.title}/>
         : <h2>Template slice, update me!</h2>
       }
     </span>
     {
       slice.primary.description ?
-      <RichText render={slice.primary.description}/>
+      <PrismicRichText render={slice.primary.description}/>
       : <p>start by editing this slice from inside Slice Machine!</p>
     }
     <style jsx>{`
