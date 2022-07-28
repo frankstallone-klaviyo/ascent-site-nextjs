@@ -14,8 +14,8 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "contentful": "^10.0.0-beta-v10.8",
     "eslint": "8.20.0",
-    "eslint-config-next": "12.2.3",
-    "react-contentful": "^2.0.31"
+    "eslint-config-next": "12.2.3"
   }
 }

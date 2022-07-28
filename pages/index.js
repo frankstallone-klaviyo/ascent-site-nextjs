@@ -1,6 +1,19 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import { default as contentful } from 'contentful';
+
+const client = contentful.createClient({
+  // This is the space ID. A space is like a project folder in Contentful terms
+  space: process.env.CONTENTFUL_SPACE_ID,
+  // This is the access token for this space. Normally you get both ID and the token in the Contentful web app
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+});
+// This API call will request an entry with the specified ID from the space defined at the top, using a space-specific access token.
+client
+  .getEntry("P9ENi08Uv2JPkPljzEyKW")
+  .then(entry => console.log(entry))
+  .catch(err => console.log(err));
 
 export default function Home() {
   return (
