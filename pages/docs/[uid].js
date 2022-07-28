@@ -1,9 +1,17 @@
-import { SliceZone } from '@prismicio/react'
+import { PrismicRichText, SliceZone } from '@prismicio/react'
 import * as prismicH from '@prismicio/helpers'
 import { createClient, linkResolver } from '../../prismicio'
 import { components } from '../../slices'
 
 const Page = ({ page, navigation, settings }) => {
+    if (!page.data.slices) {
+        return (
+          <div>
+            <h1><PrismicRichText field={page.data.page_title} /></h1>
+            <PrismicRichText field={page.data.main_text} />
+          </div>
+        );
+    }
   return <SliceZone slices={page.data.slices} components={components} />
 }
 
