@@ -19,7 +19,7 @@ export function linkResolver(doc) {
     case 'homepage':
       return '/'
     case 'documentation_page':
-      return `/${doc.uid}`
+      return `/docs/${doc.uid}`
     default:
       return null
   }
