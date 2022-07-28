@@ -12,7 +12,7 @@ const PageHeader = ({ slice }) => (
     </span>
     {
       slice.primary.description ?
-      <PrismicRichText render={slice.primary.description}/>
+      <PrismicRichText field={slice.primary.description}/>
       : <p>start by editing this slice from inside Slice Machine!</p>
     }
     <style jsx>{`
