@@ -1,0 +1,24 @@
+[
+  {
+    "variation": "default",
+    "name": "Default",
+    "slice_type": "page_header",
+    "items": [],
+    "primary": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Reinvent 24/365 technologies",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Tempor cillum tempor sunt ut do duis enim excepteur.",
+          "spans": []
+        }
+      ]
+    }
+  }
+]
