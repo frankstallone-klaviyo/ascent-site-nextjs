@@ -4,14 +4,14 @@ import { createClient, linkResolver } from '../../../prismicio'
 import { components } from '../../../slices'
 
 const Page = ({ page, navigation, settings }) => {
-    if (!page.data.slices) {
+    if (!page.data.slices || page.data.slices.length === 0) {
         return (
           <div>
-            <h1><PrismicRichText field={page.data.page_title} /></h1>
             <PrismicRichText field={page.data.main_text} />
           </div>
         );
     }
+  console.log(page.data.slices);
   return <SliceZone slices={page.data.slices} components={components} />
 }
 
@@ -21,17 +21,15 @@ export async function getStaticProps({ params, previewData }) {
   const client = createClient({ previewData })
     //   Ensure route is set up correctly in prismicio.js
     const page = await client.getByUID('documentation_page', params.uid)
-
-    console.log(page)
-  
-  return {
+    
+    return {
       props: {
-          page,
-        },
+        page,
+      },
     }
-}
-
-export async function getStaticPaths() {
+  }
+  
+  export async function getStaticPaths() {
     const client = createClient()
     
     const pages = await client.getAllByType('documentation_page')

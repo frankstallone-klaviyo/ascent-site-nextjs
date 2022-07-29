@@ -1,31 +1,22 @@
 import React from 'react'
-import { PrismicRichText } from '@prismicio/react'
+import { Link } from '@prismicio/react'
 
 const Header = ({ slice }) => (
-  <section>
-    <span className="title">
-      {
-        slice.primary.title ?
-        <PrismicRichText field={slice.primary.title}/>
-        : <h2>Template slice, update me!</h2>
-      }
-    </span>
-    {
-      slice.primary.description ?
-      <PrismicRichText field={slice.primary.description}/>
-      : <p>start by editing this slice from inside Slice Machine!</p>
-    }
-    <style jsx>{`
-        section {
-          max-width: 600px;
-          margin: 4em auto;
-          text-align: center;
-        }
-        .title {
-          color: #8592e0;
-        }
-    `}</style>
-  </section>
+  <header>
+    <div className='logo'>
+      <a href="/"><img src={slice.primary.Logo.url} alt={slice.primary.Logo.alt} /></a>
+    </div>
+    <div className='internal-links'>
+      { slice?.items?.map((item, i) => /* import { Link } from 'prismic-reactjs' */
+      <a href={Link.url(item.ExternalLink)}>My Link</a>
+      ) }
+    </div>
+    <div className='internal-links'>
+      { slice?.items?.map((item, i) => /* import { Link } from 'prismic-reactjs' */
+      <a href={Link.url(item.InternalLink)}>My Link</a>
+      ) }
+    </div>
+  </header>
 )
 
 export default Header

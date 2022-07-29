@@ -1,0 +1,56 @@
+{
+  "id": "main_header",
+  "label": "Main Header",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "logo": {
+        "type": "Image",
+        "config": {
+          "label": "Logo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "InternalNav": {
+        "type": "Group",
+        "config": {
+          "label": "Internal Nav",
+          "fields": {
+            "NavItem": {
+              "type": "Link",
+              "config": {
+                "label": "Nav Item",
+                "select": "document"
+              }
+            }
+          }
+        }
+      },
+      "ExternalNav": {
+        "type": "Group",
+        "config": {
+          "label": "External Nav",
+          "fields": {
+            "NavItem": {
+              "type": "Link",
+              "config": {
+                "label": "Nav Item",
+                "placeholder": "",
+                "select": null
+              }
+            }
+          }
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
+      }
+    }
+  }
+}

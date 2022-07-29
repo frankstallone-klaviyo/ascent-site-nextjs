@@ -1,13 +1,49 @@
 {
   "slices": {
-    "PageHeader": {},
+    "PageHeader": {
+      "default": {
+        "primary": {
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
     "Header": {
       "default": {
         "primary": {}
       }
-    }
+    },
+    "Image": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "RichText": {
+      "default": {
+        "primary": {
+          "wysiwyg": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "Embed": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Test": {}
   },
   "_cts": {
-    "homepage": {}
+    "homepage": {},
+    "documentation_page": {},
+    "main_header": {}
   }
 }

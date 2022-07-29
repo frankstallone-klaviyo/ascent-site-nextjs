@@ -1,6 +1,68 @@
 {
   "slices": {
     "components": {
+      "embed": {
+        "library": "slices",
+        "id": "embed",
+        "name": "Embed",
+        "description": "Embed",
+        "model": {
+          "id": "embed",
+          "type": "SharedSlice",
+          "name": "Embed",
+          "description": "Embed",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Embed",
+              "primary": {
+                "Embed": {
+                  "type": "Embed",
+                  "config": {
+                    "label": "Embed",
+                    "placeholder": "Loom, YouTube, etc. URL"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "embed",
+            "items": [],
+            "primary": {
+              "Embed": {
+                "title": "Data Modelling — Create your Custom Types and Slices",
+                "author_name": "Prismic",
+                "author_url": "https://www.youtube.com/channel/UCJq6AEgtWeZt7ziQ-fLKOeA",
+                "type": "video",
+                "height": 113,
+                "width": 200,
+                "version": "1.0",
+                "provider_name": "YouTube",
+                "provider_url": "https://www.youtube.com/",
+                "thumbnail_height": 360,
+                "thumbnail_width": 480,
+                "thumbnail_url": "https://i.ytimg.com/vi/c-ATzcy6VkI/hqdefault.jpg",
+                "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/c-ATzcy6VkI?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+              }
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
       "header": {
         "library": "slices",
         "id": "header",
@@ -26,18 +88,111 @@
                     "constraint": {},
                     "thumbnails": []
                   }
-                },
-                "PrismicDocument": {
-                  "type": "Link",
-                  "config": {
-                    "label": "Prismic Document",
-                    "select": "document"
-                  }
-                },
+                }
+              },
+              "items": {
                 "ExternalLink": {
                   "type": "Link",
                   "config": {
                     "label": "External Link",
+                    "placeholder": "",
+                    "select": null
+                  }
+                },
+                "InternalLink": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Internal Link",
+                    "select": "document"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "header",
+            "items": [
+              {
+                "ExternalLink": {
+                  "link_type": "Web",
+                  "url": "https://prismic.io"
+                },
+                "InternalLink": {
+                  "link_type": "Web",
+                  "url": "https://prismic.io"
+                }
+              },
+              {
+                "ExternalLink": {
+                  "link_type": "Web",
+                  "url": "https://prismic.io"
+                },
+                "InternalLink": {
+                  "link_type": "Web",
+                  "url": "http://google.com"
+                }
+              }
+            ],
+            "primary": {
+              "Logo": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": "Placeholder image",
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a?w=900&h=500&fit=crop"
+              }
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/frank.stallone/klaviyo/ascent-site-nextjs/.slicemachine/assets/slices/Header/default/preview.png",
+            "width": 800,
+            "height": 504
+          }
+        }
+      },
+      "image": {
+        "library": "slices",
+        "id": "image",
+        "name": "Image",
+        "description": "Image",
+        "model": {
+          "id": "image",
+          "type": "SharedSlice",
+          "name": "Image",
+          "description": "Image",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Image",
+              "primary": {
+                "Image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "ImageLink": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Image Link",
                     "placeholder": "",
                     "select": null
                   }
@@ -52,25 +207,21 @@
           "default": {
             "variation": "default",
             "name": "Default",
-            "slice_type": "header",
+            "slice_type": "image",
             "items": [],
             "primary": {
-              "Logo": {
+              "Image": {
                 "dimensions": {
                   "width": 900,
                   "height": 500
                 },
                 "alt": "Placeholder image",
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db?w=900&h=500&fit=crop"
+                "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43?w=900&h=500&fit=crop"
               },
-              "PrismicDocument": {
+              "ImageLink": {
                 "link_type": "Web",
-                "url": "http://google.com"
-              },
-              "ExternalLink": {
-                "link_type": "Web",
-                "url": "http://google.com"
+                "url": "https://slicemachine.dev"
               }
             }
           }
@@ -110,9 +261,10 @@
                 "description": {
                   "type": "StructuredText",
                   "config": {
-                    "single": "paragraph",
                     "label": "Description",
-                    "placeholder": "A nice description of your feature"
+                    "placeholder": "Description of page",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
                   }
                 }
               },
@@ -131,14 +283,14 @@
               "title": [
                 {
                   "type": "heading1",
-                  "text": "Reinvent 24/365 technologies",
+                  "text": "Matrix turn-key bandwidth",
                   "spans": []
                 }
               ],
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Tempor cillum tempor sunt ut do duis enim excepteur.",
+                  "text": "Culpa tempor esse exercitation sit nisi commodo irure nulla et labore aliqua ut consectetur.",
                   "spans": []
                 }
               ]
@@ -149,7 +301,75 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/frank.stallone/klaviyo/ascent-site-nextjs/.slicemachine/assets/slices/PageHeader/default/preview.png",
+            "width": 800,
+            "height": 86
+          }
+        }
+      },
+      "rich_text": {
+        "library": "slices",
+        "id": "rich_text",
+        "name": "RichText",
+        "description": "RichText",
+        "model": {
+          "id": "rich_text",
+          "type": "SharedSlice",
+          "name": "RichText",
+          "description": "RichText",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "RichText",
+              "primary": {
+                "wysiwyg": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "WYSIWYG",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "rich_text",
+            "items": [],
+            "primary": {
+              "wysiwyg": [
+                {
+                  "type": "paragraph",
+                  "text": "Proident consectetur aliquip adipisicing incididunt ex qui nulla occaecat consequat adipisicing nisi esse. Laboris in amet mollit occaecat ad. Incididunt enim eu ad et minim consequat duis.",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/frank.stallone/klaviyo/ascent-site-nextjs/.slicemachine/assets/slices/RichText/default/preview.png",
+            "width": 800,
+            "height": 67
+          }
+        }
       }
     }
   }

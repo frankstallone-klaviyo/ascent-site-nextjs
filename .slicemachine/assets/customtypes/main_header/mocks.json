@@ -1,0 +1,62 @@
+{
+  "id": "8cd0c97f-c0fd-4506-b32e-81548f7e1c61",
+  "uid": "quia-dolorem-in",
+  "type": "main_header",
+  "data": {
+    "logo": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa?w=900&h=500&fit=crop"
+    },
+    "InternalNav": [
+      {
+        "NavItem": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        }
+      },
+      {
+        "NavItem": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        }
+      },
+      {
+        "NavItem": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        }
+      },
+      {
+        "NavItem": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        }
+      },
+      {
+        "NavItem": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        }
+      }
+    ],
+    "ExternalNav": [
+      {
+        "NavItem": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        }
+      },
+      {
+        "NavItem": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        }
+      }
+    ]
+  }
+}
