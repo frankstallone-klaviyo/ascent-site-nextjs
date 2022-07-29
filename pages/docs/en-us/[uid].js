@@ -1,7 +1,7 @@
 import { PrismicRichText, SliceZone } from '@prismicio/react'
 import * as prismicH from '@prismicio/helpers'
-import { createClient, linkResolver } from '../../prismicio'
-import { components } from '../../slices'
+import { createClient, linkResolver } from '../../../prismicio'
+import { components } from '../../../slices'
 
 const Page = ({ page, navigation, settings }) => {
     if (!page.data.slices) {
@@ -21,6 +21,8 @@ export async function getStaticProps({ params, previewData }) {
   const client = createClient({ previewData })
     //   Ensure route is set up correctly in prismicio.js
     const page = await client.getByUID('documentation_page', params.uid)
+
+    console.log(page)
   
   return {
       props: {

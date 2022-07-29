@@ -12,6 +12,9 @@
           "choices": {
             "page_header": {
               "type": "SharedSlice"
+            },
+            "header": {
+              "type": "SharedSlice"
             }
           }
         }

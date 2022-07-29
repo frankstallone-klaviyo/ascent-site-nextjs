@@ -1,6 +1,11 @@
 {
   "slices": {
-    "PageHeader": {}
+    "PageHeader": {},
+    "Header": {
+      "default": {
+        "primary": {}
+      }
+    }
   },
   "_cts": {
     "homepage": {}
