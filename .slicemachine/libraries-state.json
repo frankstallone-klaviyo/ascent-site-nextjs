@@ -372,5 +372,11 @@
         }
       }
     }
+  },
+  "slices/docs": {
+    "components": {}
+  },
+  "slices/blog": {
+    "components": {}
   }
 }

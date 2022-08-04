@@ -1,11 +1,11 @@
 {
-  "_latest": "0.3.0",
+  "_latest": "0.4.1",
   "apiEndpoint": "https://klaviyo.prismic.io/api/v2",
   "libraries": [
     "@/slices",
-    "@/docs",
-    "@/blog"
+    "@/slices/docs",
+    "@/slices/blog"
   ],
   "localSliceSimulatorURL": "http://localhost:3000/slice-simulator",
-  "framework": "previousNext"
+  "framework": "next"
 }
