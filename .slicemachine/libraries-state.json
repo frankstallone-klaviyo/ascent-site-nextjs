@@ -166,12 +166,12 @@
       "image": {
         "library": "slices",
         "id": "image",
-        "name": "Image",
+        "name": "PrismicImage",
         "description": "Image",
         "model": {
           "id": "image",
           "type": "SharedSlice",
-          "name": "Image",
+          "name": "PrismicImage",
           "description": "Image",
           "variations": [
             {
@@ -370,6 +370,64 @@
             "height": 67
           }
         }
+      },
+      "table_block": {
+        "library": "slices",
+        "id": "table_block",
+        "name": "TableBlock",
+        "description": "TableBlock",
+        "model": {
+          "id": "table_block",
+          "type": "SharedSlice",
+          "name": "TableBlock",
+          "description": "TableBlock",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "TableBlock",
+              "primary": {
+                "header": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Header",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading1"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "header": [
+                {
+                  "type": "heading1",
+                  "text": "Teeth",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "table_block"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
       }
     }
   },

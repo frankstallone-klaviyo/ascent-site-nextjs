@@ -39,7 +39,19 @@
         "primary": {}
       }
     },
-    "Test": {}
+    "Test": {},
+    "TableBlock": {
+      "default": {
+        "primary": {
+          "header": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    }
   },
   "_cts": {
     "homepage": {},

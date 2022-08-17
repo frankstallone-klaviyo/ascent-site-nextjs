@@ -1,0 +1,19 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "header": [
+        {
+          "type": "heading1",
+          "text": "Teeth",
+          "spans": []
+        }
+      ]
+    },
+    "slice_type": "table_block"
+  }
+]

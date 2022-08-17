@@ -11,7 +11,7 @@ const Page = ({ page, navigation, settings }) => {
           </div>
         );
     }
-  console.log(page.data.slices);
+  // console.log(page.data.slices);
   return <SliceZone slices={page.data.slices} components={components} />
 }
 
@@ -19,8 +19,12 @@ export default Page
 
 export async function getStaticProps({ params, previewData }) {
   const client = createClient({ previewData })
-    //   Ensure route is set up correctly in prismicio.js
-    const page = await client.getByUID('documentation_page', params.uid)
+
+    const { uid, lang } = params;
+
+    // Ensure route is set up correctly in prismicio.js
+    const page = await client.getByUID('documentation_page', uid, { lang })
+
     
     return {
       props: {

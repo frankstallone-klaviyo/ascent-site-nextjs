@@ -1,30 +1,23 @@
 {
-  "id": "image",
+  "id": "table_block",
   "type": "SharedSlice",
-  "name": "PrismicImage",
-  "description": "Image",
+  "name": "TableBlock",
+  "description": "TableBlock",
   "variations": [
     {
       "id": "default",
       "name": "Default",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "Image",
+      "description": "TableBlock",
       "primary": {
-        "Image": {
-          "type": "Image",
+        "header": {
+          "type": "StructuredText",
           "config": {
-            "label": "Image",
-            "constraint": {},
-            "thumbnails": []
-          }
-        },
-        "ImageLink": {
-          "type": "Link",
-          "config": {
-            "label": "Image Link",
+            "label": "Header",
             "placeholder": "",
-            "select": null
+            "allowTargetBlank": true,
+            "single": "heading1"
           }
         }
       },

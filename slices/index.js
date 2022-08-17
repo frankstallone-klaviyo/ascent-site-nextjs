@@ -2,22 +2,25 @@
 
 import Embed from './Embed';
 import Header from './Header';
-import Image from './Image';
+import PrismicImage from './Image';
 import PageHeader from './PageHeader';
 import RichText from './RichText';
+import TableBlock from './TableBlock';
 
 export {
 	Embed,
 	Header,
-	Image,
+	PrismicImage,
 	PageHeader,
 	RichText,
+	TableBlock,
 };
 
 export const components = {
 	embed: Embed,
 	header: Header,
-	image: Image,
+	image: PrismicImage,
 	page_header: PageHeader,
 	rich_text: RichText,
+	table_block: TableBlock,
 };

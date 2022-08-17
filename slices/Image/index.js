@@ -1,11 +1,12 @@
 import React from 'react'
+import Image from 'next/image'
 
-const Image = ({ slice }) => (
+const PrismicImage = ({ slice }) => (
   // TODO: Need to wrap in anchor tag if one exists. 
   /* import { Link } from 'prismic-reactjs' */
   /* <a href={Link.url(slice.primary.ImageLink)}>My Link</a> */
 
-  <img src={slice.primary.Image.url} alt={slice.primary.Image.alt} />
+  <Image src={slice.primary.image.url} alt={slice.primary.image.alt} />
 )
 
-export default Image
+export default PrismicImage
