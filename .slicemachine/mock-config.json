@@ -51,6 +51,23 @@
           }
         }
       }
+    },
+    "Heading": {
+      "default": {
+        "primary": {
+          "heading": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "PrismicImage": {
+      "default": {
+        "primary": {}
+      }
     }
   },
   "_cts": {

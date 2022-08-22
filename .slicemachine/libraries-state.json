@@ -163,38 +163,31 @@
           }
         }
       },
-      "image": {
+      "heading": {
         "library": "slices",
-        "id": "image",
-        "name": "PrismicImage",
-        "description": "Image",
+        "id": "heading",
+        "name": "Heading",
+        "description": "Heading",
         "model": {
-          "id": "image",
+          "id": "heading",
           "type": "SharedSlice",
-          "name": "PrismicImage",
-          "description": "Image",
+          "name": "Heading",
+          "description": "Heading",
           "variations": [
             {
               "id": "default",
               "name": "Default",
               "docURL": "...",
               "version": "sktwi1xtmkfgx8626",
-              "description": "Image",
+              "description": "Heading",
               "primary": {
-                "Image": {
-                  "type": "Image",
+                "heading": {
+                  "type": "StructuredText",
                   "config": {
-                    "label": "Image",
-                    "constraint": {},
-                    "thumbnails": []
-                  }
-                },
-                "ImageLink": {
-                  "type": "Link",
-                  "config": {
-                    "label": "Image Link",
+                    "label": "Heading",
                     "placeholder": "",
-                    "select": null
+                    "allowTargetBlank": true,
+                    "single": "heading1,heading2,heading3,heading4,heading5,heading6"
                   }
                 }
               },
@@ -206,24 +199,20 @@
         "mocks": {
           "default": {
             "variation": "default",
-            "name": "Default",
-            "slice_type": "image",
-            "items": [],
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
             "primary": {
-              "Image": {
-                "dimensions": {
-                  "width": 900,
-                  "height": 500
-                },
-                "alt": "Placeholder image",
-                "copyright": null,
-                "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43?w=900&h=500&fit=crop"
-              },
-              "ImageLink": {
-                "link_type": "Web",
-                "url": "https://slicemachine.dev"
-              }
-            }
+              "heading": [
+                {
+                  "type": "heading1",
+                  "text": "Parallel",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "heading"
           }
         },
         "meta": {
@@ -308,6 +297,77 @@
             "height": 86
           }
         }
+      },
+      "image": {
+        "library": "slices",
+        "id": "image",
+        "name": "PrismicImage",
+        "description": "Image",
+        "model": {
+          "id": "image",
+          "type": "SharedSlice",
+          "name": "PrismicImage",
+          "description": "Image",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Image",
+              "primary": {
+                "Image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "ImageLink": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Image Link",
+                    "placeholder": "",
+                    "select": null
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "Image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db"
+              },
+              "ImageLink": {
+                "link_type": "Web",
+                "url": "http://twitter.com"
+              }
+            },
+            "slice_type": "image"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
       },
       "rich_text": {
         "library": "slices",

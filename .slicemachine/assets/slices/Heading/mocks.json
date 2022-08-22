@@ -1,0 +1,19 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "heading": [
+        {
+          "type": "heading1",
+          "text": "Parallel",
+          "spans": []
+        }
+      ]
+    },
+    "slice_type": "heading"
+  }
+]

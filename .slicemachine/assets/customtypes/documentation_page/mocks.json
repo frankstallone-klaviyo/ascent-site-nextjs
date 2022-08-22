@@ -1,21 +1,23 @@
 {
-  "id": "e5e9ee52-a484-46b2-876b-41ddfda14578",
-  "uid": "neque-aspernatur-qui",
+  "id": "mock-doc-id",
+  "url": null,
   "type": "documentation_page",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
   "data": {
     "page_title": [
       {
         "type": "heading1",
-        "text": "Visualize compelling eyeballs",
+        "text": "Gently",
         "spans": []
       }
     ],
-    "main_text": [
-      {
-        "type": "paragraph",
-        "text": "Exercitation anim reprehenderit aliquip dolor occaecat tempor quis ipsum eiusmod tempor fugiat. Velit reprehenderit proident elit qui occaecat ipsum deserunt. Excepteur enim aute ut eiusmod do laborum reprehenderit incididunt.",
-        "spans": []
-      }
-    ]
+    "slices": []
   }
 }

@@ -13,15 +13,6 @@
           "placeholder": "Page title"
         }
       },
-      "main_text": {
-        "type": "StructuredText",
-        "config": {
-          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
-          "allowTargetBlank": true,
-          "label": "Main text",
-          "placeholder": "Main content"
-        }
-      },
       "uid": {
         "type": "UID",
         "config": {
@@ -34,13 +25,13 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "image": {
+              "type": "SharedSlice"
+            },
             "embed": {
               "type": "SharedSlice"
             },
-            "header": {
-              "type": "SharedSlice"
-            },
-            "image": {
+            "heading": {
               "type": "SharedSlice"
             },
             "rich_text": {
