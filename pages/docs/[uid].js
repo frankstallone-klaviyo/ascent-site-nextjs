@@ -1,7 +1,7 @@
 import { PrismicRichText, SliceZone } from '@prismicio/react'
 import * as prismicH from '@prismicio/helpers'
-import { createClient, linkResolver } from '../../../prismicio'
-import { components } from '../../../slices'
+import { createClient, linkResolver } from '../../prismicio'
+import { components } from '../../slices'
 
 const Page = ({ page, navigation, settings }) => {
     if (!page.data.slices || page.data.slices.length === 0) {
