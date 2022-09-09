@@ -12,9 +12,6 @@ const PrismicImage = ({ slice }) => {
       layout="responsive"
     />
   );
-  
-  // If we need an image with a link, wrap it here
-  {SliceImage}
 
   return <>{SliceImage}</>;
 };
