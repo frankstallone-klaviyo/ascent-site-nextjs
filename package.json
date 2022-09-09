@@ -10,6 +10,8 @@
     "slicemachine": "start-slicemachine"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.0",
+    "@heroicons/react": "^2.0.10",
     "@prismicio/slice-simulator-react": "^0.2.2",
     "next": "12.2.4",
     "react": "18.2.0",
