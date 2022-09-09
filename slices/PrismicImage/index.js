@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { PrismicLink } from "@prismicio/react";
+// import { PrismicLink } from "@prismicio/react";
 
 const PrismicImage = ({ slice }) => {
   const SliceImage = (
