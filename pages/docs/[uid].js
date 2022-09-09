@@ -6,13 +6,12 @@ import { components } from '../../slices'
 const Page = ({ page, navigation, settings }) => {
     if (!page.data.slices || page.data.slices.length === 0) {
         return (
-          <div>
+          <div className='prose'>
             <PrismicRichText field={page.data.main_text} />
           </div>
         );
     }
-  // console.log(page.data.slices);
-  return <SliceZone slices={page.data.slices} components={components} />
+  return <div className='prose'><SliceZone slices={page.data.slices} components={components} /></div>
 }
 
 export default Page
