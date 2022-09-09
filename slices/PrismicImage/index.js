@@ -13,7 +13,6 @@ const PrismicImage = ({ slice }) => {
     />
   );
   
-  console.log(slice.primary.ImageLink.link_type)
   // If we need an image with a link, wrap it here
   {SliceImage}
 
