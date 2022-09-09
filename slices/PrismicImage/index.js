@@ -12,16 +12,12 @@ const PrismicImage = ({ slice }) => {
       layout="responsive"
     />
   );
+  
+  console.log(slice.primary.ImageLink.link_type)
+  // If we need an image with a link, wrap it here
+  {SliceImage}
 
-  const RenderImage = slice.primary.ImageLink !== 'Any' ? (
-    <PrismicLink field={slice.primary.ImageLink}>
-      {SliceImage}
-    </PrismicLink>
-  ) : (
-    {SliceImage}
-  );
-
-  return <>{RenderImage}</>;
+  return <>{SliceImage}</>;
 };
 
 export default PrismicImage;

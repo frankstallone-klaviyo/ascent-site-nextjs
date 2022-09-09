@@ -1,6 +1,16 @@
 {
-  "id": "d5913610-e0cc-4321-837a-ea21fb23a432",
-  "uid": "molestiae-qui-amet",
+  "id": "mock-doc-id",
+  "url": null,
   "type": "homepage",
-  "data": {}
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "slices": []
+  }
 }
