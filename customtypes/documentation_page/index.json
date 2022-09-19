@@ -36,6 +36,15 @@
             },
             "rich_text": {
               "type": "SharedSlice"
+            },
+            "component_anatomy": {
+              "type": "SharedSlice"
+            },
+            "component_variant": {
+              "type": "SharedSlice"
+            },
+            "component_guidelines": {
+              "type": "SharedSlice"
             }
           }
         }

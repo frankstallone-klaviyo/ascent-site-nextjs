@@ -2,6 +2,7 @@ import { SliceZone } from '@prismicio/react'
 import * as prismicH from '@prismicio/helpers'
 import { createClient, linkResolver } from '../../prismicio'
 import { components } from '../../slices'
+import { components as docComponents } from '../../slices/docs'
 import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import {
@@ -15,6 +16,7 @@ const tempNavigation = [
   { name: 'Home', href: '/', icon: HomeIcon, current: false },
   { name: 'Figma Plugins', href: '/docs/figma-plugins', icon: CubeIcon, current: false },
   { name: 'Checkbox', href: '/docs/checkbox', icon: CubeIcon, current: false },
+  { name: 'ListMenu', href: '/docs/listmenu', icon: CubeIcon, current: false },
 ]
 
 function classNames(...classes) {
@@ -195,7 +197,10 @@ const Page = ({ page, navigation, settings }) => {
           <main className="flex-1">
             <div className="py-6">
               <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 prose">
-                <SliceZone slices={page.data.slices} components={components} />
+                <SliceZone slices={page.data.slices} components={{
+                  ...components, 
+                  ...docComponents
+                }} />
               </div>
             </div>
           </main>

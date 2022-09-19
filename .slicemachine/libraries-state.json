@@ -157,7 +157,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/frank.stallone/klaviyo/ascent-site-nextjs/.slicemachine/assets/slices/Header/default/preview.png",
+            "path": "/Users/victor.girotto/Code/ascent-site-nextjs/.slicemachine/assets/slices/Header/default/preview.png",
             "width": 800,
             "height": 504
           }
@@ -292,7 +292,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/frank.stallone/klaviyo/ascent-site-nextjs/.slicemachine/assets/slices/PageHeader/default/preview.png",
+            "path": "/Users/victor.girotto/Code/ascent-site-nextjs/.slicemachine/assets/slices/PageHeader/default/preview.png",
             "width": 800,
             "height": 86
           }
@@ -425,7 +425,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/frank.stallone/klaviyo/ascent-site-nextjs/.slicemachine/assets/slices/RichText/default/preview.png",
+            "path": "/Users/victor.girotto/Code/ascent-site-nextjs/.slicemachine/assets/slices/RichText/default/preview.png",
             "width": 800,
             "height": 67
           }
@@ -492,7 +492,306 @@
     }
   },
   "slices/docs": {
-    "components": {}
+    "components": {
+      "component_anatomy": {
+        "library": "slices/docs",
+        "id": "component_anatomy",
+        "name": "ComponentAnatomy",
+        "description": "ComponentAnatomy",
+        "model": {
+          "id": "component_anatomy",
+          "type": "SharedSlice",
+          "name": "ComponentAnatomy",
+          "description": "ComponentAnatomy",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "ComponentAnatomy",
+              "primary": {
+                "anatomy_image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Anatomy Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "items": {
+                "part": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Part",
+                    "placeholder": ""
+                  }
+                },
+                "part_description": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Part Description",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "part": "ate",
+                "part_description": "cheese"
+              }
+            ],
+            "primary": {
+              "anatomy_image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+              }
+            },
+            "slice_type": "component_anatomy"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "component_guidelines": {
+        "library": "slices/docs",
+        "id": "component_guidelines",
+        "name": "ComponentGuidelines",
+        "description": "ComponentGuidelines",
+        "model": {
+          "id": "component_guidelines",
+          "type": "SharedSlice",
+          "name": "ComponentGuidelines",
+          "description": "ComponentGuidelines",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "ComponentGuidelines",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": true,
+                    "single": "heading2"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                }
+              },
+              "items": {
+                "type": {
+                  "type": "Select",
+                  "config": {
+                    "label": "Type",
+                    "placeholder": "",
+                    "options": [
+                      "positive",
+                      "negative"
+                    ],
+                    "default_value": "positive"
+                  }
+                },
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "header": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Header",
+                    "placeholder": ""
+                  }
+                },
+                "description": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Description",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "type": "negative",
+                "image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89"
+                },
+                "header": "eleven",
+                "description": "indeed"
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading2",
+                  "text": "Finger",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Ex exercitation fugiat eu aliqua est tempor minim ea. Duis nulla est fugiat. Sit ex eu ad id ipsum labore laboris.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "component_guidelines"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "component_variant": {
+        "library": "slices/docs",
+        "id": "component_variant",
+        "name": "ComponentVariant",
+        "description": "ComponentVariant",
+        "model": {
+          "id": "component_variant",
+          "type": "SharedSlice",
+          "name": "ComponentVariant",
+          "description": "ComponentVariant",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "ComponentVariant",
+              "primary": {
+                "variant_name": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Variant Name",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": true,
+                    "single": "heading2"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                }
+              },
+              "items": {
+                "variant_name": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Variant Name",
+                    "placeholder": ""
+                  }
+                },
+                "variant_image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "variant_image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "variant_name": "pool",
+                "variant_image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b"
+                }
+              }
+            ],
+            "primary": {
+              "variant_name": [
+                {
+                  "type": "heading2",
+                  "text": "Force",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Qui eiusmod in eu eiusmod aute mollit. Culpa sit nisi amet voluptate adipisicing.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "component_variant"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      }
+    }
   },
   "slices/blog": {
     "components": {}

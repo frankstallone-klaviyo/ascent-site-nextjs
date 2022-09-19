@@ -74,5 +74,39 @@
     "homepage": {},
     "documentation_page": {},
     "main_header": {}
+  },
+  "slices/docs": {
+    "ComponentAnatomy": {
+      "default": {
+        "items": {},
+        "primary": {}
+      }
+    },
+    "ComponentVariant": {
+      "default": {
+        "primary": {
+          "variant_name": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {}
+      }
+    },
+    "ComponentGuidelines": {
+      "default": {
+        "items": {},
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    }
   }
 }
