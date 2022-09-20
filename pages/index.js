@@ -10,13 +10,16 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 
-const tempNavigation = [
+// Hardcoded navigation, for now
+export const mainNavigation = [
   { name: 'Home', href: '/', icon: HomeIcon, current: true },
-  { name: 'Figma Plugins', href: '/docs/figma-plugins#', icon: CubeIcon, current: false },
+  { name: 'Figma Plugins', href: '/docs/figma-plugins', icon: CubeIcon, current: false },
   { name: 'Checkbox', href: '/docs/checkbox', icon: CubeIcon, current: false },
-]
+  { name: 'ListMenu', href: '/docs/listmenu', icon: CubeIcon, current: false },
+];
 
-function classNames(...classes) {
+// Hardcoded classNames join, for now
+export function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
@@ -80,7 +83,7 @@ const Page = ({ page, navigation, settings }) => {
                       />
                     </div>
                     <nav className="mt-5 space-y-1 px-2">
-                      {tempNavigation.map((item) => (
+                      {mainNavigation.map((item) => (
                         <a
                           key={item.name}
                           href={item.href}
@@ -140,7 +143,7 @@ const Page = ({ page, navigation, settings }) => {
                 />
               </div>
               <nav className="mt-5 flex-1 space-y-1 bg-white px-2">
-                {tempNavigation.map((item) => (
+                {mainNavigation.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}

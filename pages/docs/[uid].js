@@ -7,21 +7,10 @@ import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import {
   Bars3Icon,
-  HomeIcon,
-  CubeIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 
-const tempNavigation = [
-  { name: 'Home', href: '/', icon: HomeIcon, current: false },
-  { name: 'Figma Plugins', href: '/docs/figma-plugins', icon: CubeIcon, current: false },
-  { name: 'Checkbox', href: '/docs/checkbox', icon: CubeIcon, current: false },
-  { name: 'ListMenu', href: '/docs/listmenu', icon: CubeIcon, current: false },
-]
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
+import { mainNavigation, classNames } from '../index';
 
 const Page = ({ page, navigation, settings }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -83,7 +72,7 @@ const Page = ({ page, navigation, settings }) => {
                       />
                     </div>
                     <nav className="mt-5 space-y-1 px-2">
-                      {tempNavigation.map((item) => (
+                      {mainNavigation.map((item) => (
                         <a
                           key={item.name}
                           href={item.href}
@@ -143,7 +132,7 @@ const Page = ({ page, navigation, settings }) => {
                 />
               </div>
               <nav className="mt-5 flex-1 space-y-1 bg-white px-2">
-                {tempNavigation.map((item) => (
+                {mainNavigation.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}
