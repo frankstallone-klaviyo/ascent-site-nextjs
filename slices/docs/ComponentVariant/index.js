@@ -3,7 +3,7 @@ import { PrismicRichText } from '@prismicio/react'
 
 const ComponentVariant = ({ slice }) => (
   <section className="bg-slate-300 rounded-3xl p-8 mb-12">
-    <PrismicRichText field={slice.primary.variant_name} />
+    <h2 className="mt-0">{slice.primary.variant_name}</h2>
 
     <PrismicRichText field={slice.primary.description} />
 

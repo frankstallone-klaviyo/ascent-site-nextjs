@@ -12,12 +12,10 @@
       "description": "ComponentVariant",
       "primary": {
         "variant_name": {
-          "type": "StructuredText",
+          "type": "Text",
           "config": {
             "label": "Variant Name",
-            "placeholder": "This is where it all begins...",
-            "allowTargetBlank": true,
-            "single": "heading2"
+            "placeholder": ""
           }
         },
         "description": {

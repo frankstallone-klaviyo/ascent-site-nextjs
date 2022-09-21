@@ -3,7 +3,7 @@ import { PrismicRichText } from '@prismicio/react'
 
 const ComponentGuidelines = ({ slice }) => (
   <section className="bg-slate-300 rounded-3xl flex flex-col gap-8 p-8 mb-12">
-    <PrismicRichText field={slice.primary.title} />
+    <h2 className="my-0">{slice.primary.title}</h2>
 
     <PrismicRichText field={slice.primary.description} />
 

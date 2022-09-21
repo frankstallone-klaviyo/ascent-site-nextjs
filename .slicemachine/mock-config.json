@@ -84,28 +84,14 @@
     },
     "ComponentVariant": {
       "default": {
-        "primary": {
-          "variant_name": {
-            "config": {
-              "patternType": "HEADING",
-              "blocks": 1
-            }
-          }
-        },
+        "primary": {},
         "items": {}
       }
     },
     "ComponentGuidelines": {
       "default": {
         "items": {},
-        "primary": {
-          "title": {
-            "config": {
-              "patternType": "HEADING",
-              "blocks": 1
-            }
-          }
-        }
+        "primary": {}
       }
     }
   }
