@@ -1,25 +1,13 @@
-import { SliceSimulator } from '@prismicio/slice-simulator-react'
-import { SliceZone } from '@prismicio/react'
+import { SliceSimulator } from "@prismicio/slice-simulator-react";
+import { SliceZone } from "@prismicio/react";
 
-import { components } from '../slices'
-import state from '../.slicemachine/libraries-state.json'
+import state from "../.slicemachine/libraries-state.json";
+import { components } from "../slices";
 
-const SliceSimulatorPage = () => {
-  return (
-    <SliceSimulator
-      sliceZone={({ slices }) => (
-        <SliceZone slices={slices} components={components} />
-      )}
-      state={state}
-    />
-  )
-}
+const SliceSimulatorPage = () => (<SliceSimulator
+  // The "sliceZone" prop should be a function receiving slices and rendering them using your "SliceZone" component.
+  sliceZone={(props) => <SliceZone {...props} components={components} />}
+  state={state}
+/>);
 
-export default SliceSimulatorPage
-
-// Only include this page in development
-export const getStaticProps = () => {
-  return {
-    notFound: process.env.NODE_ENV !== 'development',
-  }
-}
+export default SliceSimulatorPage;

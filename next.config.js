@@ -5,7 +5,8 @@ const nextConfig = {
   images: {
     domains: [
       'images.prismic.io',
-      'klaviyo.cdn.prismic.io'
+      'klaviyo.cdn.prismic.io',
+      'images.unsplash.com'
     ],
   }
 }

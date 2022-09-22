@@ -157,7 +157,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/victor.girotto/Code/ascent-site-nextjs/.slicemachine/assets/slices/Header/default/preview.png",
+            "path": "/Users/frank.stallone/klaviyo/ascent-site-nextjs/.slicemachine/assets/slices/Header/default/preview.png",
             "width": 800,
             "height": 504
           }
@@ -292,9 +292,9 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/victor.girotto/Code/ascent-site-nextjs/.slicemachine/assets/slices/PageHeader/default/preview.png",
+            "path": "/Users/frank.stallone/klaviyo/ascent-site-nextjs/.slicemachine/assets/slices/PageHeader/default/preview.png",
             "width": 800,
-            "height": 86
+            "height": 48
           }
         }
       },
@@ -425,7 +425,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/victor.girotto/Code/ascent-site-nextjs/.slicemachine/assets/slices/RichText/default/preview.png",
+            "path": "/Users/frank.stallone/klaviyo/ascent-site-nextjs/.slicemachine/assets/slices/RichText/default/preview.png",
             "width": 800,
             "height": 67
           }

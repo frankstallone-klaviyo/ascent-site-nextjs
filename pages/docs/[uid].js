@@ -1,25 +1,26 @@
-import { SliceZone } from '@prismicio/react'
-import * as prismicH from '@prismicio/helpers'
-import { createClient, linkResolver } from '../../prismicio'
-import { components } from '../../slices'
-import { components as docComponents } from '../../slices/docs'
-import { Fragment, useState } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
-import {
-  Bars3Icon,
-  XMarkIcon,
-} from '@heroicons/react/24/outline'
+import { SliceZone } from "@prismicio/react";
+import * as prismicH from "@prismicio/helpers";
+import { createClient, linkResolver } from "../../prismicio";
+import { components } from "../../slices";
+import { components as docComponents } from "../../slices/docs";
+import { Fragment, useState } from "react";
+import { Dialog, Transition } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
-import { mainNavigation, classNames } from '../index';
+import { mainNavigation, classNames } from "../index";
 
 const Page = ({ page, navigation, settings }) => {
-  const [sidebarOpen, setSidebarOpen] = useState(false)
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <>
       <div>
         <Transition.Root show={sidebarOpen} as={Fragment}>
-          <Dialog as="div" className="relative z-40 md:hidden" onClose={setSidebarOpen}>
+          <Dialog
+            as="div"
+            className="relative z-40 md:hidden"
+            onClose={setSidebarOpen}
+          >
             <Transition.Child
               as={Fragment}
               enter="transition-opacity ease-linear duration-300"
@@ -59,7 +60,10 @@ const Page = ({ page, navigation, settings }) => {
                         onClick={() => setSidebarOpen(false)}
                       >
                         <span className="sr-only">Close sidebar</span>
-                        <XMarkIcon className="h-6 w-6 text-white" aria-hidden="true" />
+                        <XMarkIcon
+                          className="h-6 w-6 text-white"
+                          aria-hidden="true"
+                        />
                       </button>
                     </div>
                   </Transition.Child>
@@ -78,15 +82,17 @@ const Page = ({ page, navigation, settings }) => {
                           href={item.href}
                           className={classNames(
                             item.current
-                              ? 'bg-gray-100 text-gray-900'
-                              : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900',
-                            'group flex items-center px-2 py-2 text-base font-medium rounded-md'
+                              ? "bg-gray-100 text-gray-900"
+                              : "text-gray-600 hover:bg-gray-50 hover:text-gray-900",
+                            "group flex items-center px-2 py-2 text-base font-medium rounded-md"
                           )}
                         >
                           <item.icon
                             className={classNames(
-                              item.current ? 'text-gray-500' : 'text-gray-400 group-hover:text-gray-500',
-                              'mr-4 flex-shrink-0 h-6 w-6'
+                              item.current
+                                ? "text-gray-500"
+                                : "text-gray-400 group-hover:text-gray-500",
+                              "mr-4 flex-shrink-0 h-6 w-6"
                             )}
                             aria-hidden="true"
                           />
@@ -106,15 +112,21 @@ const Page = ({ page, navigation, settings }) => {
                           />
                         </div>
                         <div className="ml-3">
-                          <p className="text-base font-medium text-gray-700 group-hover:text-gray-900">Tim Cook</p>
-                          <p className="text-sm font-medium text-gray-500 group-hover:text-gray-700">View profile</p>
+                          <p className="text-base font-medium text-gray-700 group-hover:text-gray-900">
+                            Tim Cook
+                          </p>
+                          <p className="text-sm font-medium text-gray-500 group-hover:text-gray-700">
+                            View profile
+                          </p>
                         </div>
                       </div>
                     </a>
                   </div>
                 </Dialog.Panel>
               </Transition.Child>
-              <div className="w-14 flex-shrink-0">{/* Force sidebar to shrink to fit close icon */}</div>
+              <div className="w-14 flex-shrink-0">
+                {/* Force sidebar to shrink to fit close icon */}
+              </div>
             </div>
           </Dialog>
         </Transition.Root>
@@ -137,14 +149,18 @@ const Page = ({ page, navigation, settings }) => {
                     key={item.name}
                     href={item.href}
                     className={classNames(
-                      item.current ? 'bg-gray-100 text-gray-900' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900',
-                      'group flex items-center px-2 py-2 text-sm font-medium rounded-md'
+                      item.current
+                        ? "bg-gray-100 text-gray-900"
+                        : "text-gray-600 hover:bg-gray-50 hover:text-gray-900",
+                      "group flex items-center px-2 py-2 text-sm font-medium rounded-md"
                     )}
                   >
                     <item.icon
                       className={classNames(
-                        item.current ? 'text-gray-500' : 'text-gray-400 group-hover:text-gray-500',
-                        'mr-3 flex-shrink-0 h-6 w-6'
+                        item.current
+                          ? "text-gray-500"
+                          : "text-gray-400 group-hover:text-gray-500",
+                        "mr-3 flex-shrink-0 h-6 w-6"
                       )}
                       aria-hidden="true"
                     />
@@ -164,8 +180,12 @@ const Page = ({ page, navigation, settings }) => {
                     />
                   </div>
                   <div className="ml-3">
-                    <p className="text-sm font-medium text-gray-700 group-hover:text-gray-900">Tim Cook</p>
-                    <p className="text-xs font-medium text-gray-500 group-hover:text-gray-700">View profile</p>
+                    <p className="text-sm font-medium text-gray-700 group-hover:text-gray-900">
+                      Tim Cook
+                    </p>
+                    <p className="text-xs font-medium text-gray-500 group-hover:text-gray-700">
+                      View profile
+                    </p>
                   </div>
                 </div>
               </a>
@@ -186,43 +206,45 @@ const Page = ({ page, navigation, settings }) => {
           <main className="flex-1">
             <div className="py-6">
               <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 prose">
-                <SliceZone slices={page.data.slices} components={{
-                  ...components, 
-                  ...docComponents
-                }} />
+                <SliceZone
+                  slices={page.data.slices}
+                  components={{
+                    ...components,
+                    ...docComponents,
+                  }}
+                />
               </div>
             </div>
           </main>
         </div>
       </div>
     </>
-  )
-}
-export default Page
+  );
+};
+export default Page;
 
 export async function getStaticProps({ params, previewData }) {
-  const client = createClient({ previewData })
+  const client = createClient({ previewData });
 
-    const { uid, lang } = params;
+  const { uid, lang } = params;
 
-    // Ensure route is set up correctly in prismicio.js
-    const page = await client.getByUID('documentation_page', uid, { lang })
+  // Ensure route is set up correctly in prismicio.js
+  const page = await client.getByUID("documentation_page", uid, { lang });
 
-    
-    return {
-      props: {
-        page,
-      },
-    }
-  }
-  
-  export async function getStaticPaths() {
-    const client = createClient()
-    
-    const pages = await client.getAllByType('documentation_page')
+  return {
+    props: {
+      page,
+    },
+  };
+}
+
+export async function getStaticPaths() {
+  const client = createClient();
+
+  const pages = await client.getAllByType("documentation_page");
 
   return {
     paths: pages.map((page) => prismicH.asLink(page, linkResolver)),
     fallback: false,
-  }
+  };
 }

@@ -1,36 +1,45 @@
-import { SliceZone } from '@prismicio/react'
-import { createClient } from '../prismicio'
-import { components } from '../slices'
-import { Fragment, useState } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
+import { SliceZone } from "@prismicio/react";
+import { createClient } from "../prismicio";
+import { components } from "../slices";
+import { Fragment, useState } from "react";
+import { Dialog, Transition } from "@headlessui/react";
 import {
   Bars3Icon,
   HomeIcon,
   CubeIcon,
   XMarkIcon,
-} from '@heroicons/react/24/outline'
+} from "@heroicons/react/24/outline";
 
 // Hardcoded navigation, for now
 export const mainNavigation = [
-  { name: 'Home', href: '/', icon: HomeIcon, current: true },
-  { name: 'Figma Plugins', href: '/docs/figma-plugins', icon: CubeIcon, current: false },
-  { name: 'Checkbox', href: '/docs/checkbox', icon: CubeIcon, current: false },
-  { name: 'ListMenu', href: '/docs/listmenu', icon: CubeIcon, current: false },
+  { name: "Home", href: "/", icon: HomeIcon, current: true },
+  {
+    name: "Figma Plugins",
+    href: "/docs/figma-plugins",
+    icon: CubeIcon,
+    current: false,
+  },
+  { name: "Checkbox", href: "/docs/checkbox", icon: CubeIcon, current: false },
+  { name: "ListMenu", href: "/docs/listmenu", icon: CubeIcon, current: false },
 ];
 
 // Hardcoded classNames join, for now
 export function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
 const Page = ({ page, navigation, settings }) => {
-  const [sidebarOpen, setSidebarOpen] = useState(false)
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <>
       <div>
         <Transition.Root show={sidebarOpen} as={Fragment}>
-          <Dialog as="div" className="relative z-40 md:hidden" onClose={setSidebarOpen}>
+          <Dialog
+            as="div"
+            className="relative z-40 md:hidden"
+            onClose={setSidebarOpen}
+          >
             <Transition.Child
               as={Fragment}
               enter="transition-opacity ease-linear duration-300"
@@ -70,7 +79,10 @@ const Page = ({ page, navigation, settings }) => {
                         onClick={() => setSidebarOpen(false)}
                       >
                         <span className="sr-only">Close sidebar</span>
-                        <XMarkIcon className="h-6 w-6 text-white" aria-hidden="true" />
+                        <XMarkIcon
+                          className="h-6 w-6 text-white"
+                          aria-hidden="true"
+                        />
                       </button>
                     </div>
                   </Transition.Child>
@@ -89,15 +101,17 @@ const Page = ({ page, navigation, settings }) => {
                           href={item.href}
                           className={classNames(
                             item.current
-                              ? 'bg-gray-100 text-gray-900'
-                              : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900',
-                            'group flex items-center px-2 py-2 text-base font-medium rounded-md'
+                              ? "bg-gray-100 text-gray-900"
+                              : "text-gray-600 hover:bg-gray-50 hover:text-gray-900",
+                            "group flex items-center px-2 py-2 text-base font-medium rounded-md"
                           )}
                         >
                           <item.icon
                             className={classNames(
-                              item.current ? 'text-gray-500' : 'text-gray-400 group-hover:text-gray-500',
-                              'mr-4 flex-shrink-0 h-6 w-6'
+                              item.current
+                                ? "text-gray-500"
+                                : "text-gray-400 group-hover:text-gray-500",
+                              "mr-4 flex-shrink-0 h-6 w-6"
                             )}
                             aria-hidden="true"
                           />
@@ -117,15 +131,21 @@ const Page = ({ page, navigation, settings }) => {
                           />
                         </div>
                         <div className="ml-3">
-                          <p className="text-base font-medium text-gray-700 group-hover:text-gray-900">Tim Cook</p>
-                          <p className="text-sm font-medium text-gray-500 group-hover:text-gray-700">View profile</p>
+                          <p className="text-base font-medium text-gray-700 group-hover:text-gray-900">
+                            Tim Cook
+                          </p>
+                          <p className="text-sm font-medium text-gray-500 group-hover:text-gray-700">
+                            View profile
+                          </p>
                         </div>
                       </div>
                     </a>
                   </div>
                 </Dialog.Panel>
               </Transition.Child>
-              <div className="w-14 flex-shrink-0">{/* Force sidebar to shrink to fit close icon */}</div>
+              <div className="w-14 flex-shrink-0">
+                {/* Force sidebar to shrink to fit close icon */}
+              </div>
             </div>
           </Dialog>
         </Transition.Root>
@@ -148,14 +168,18 @@ const Page = ({ page, navigation, settings }) => {
                     key={item.name}
                     href={item.href}
                     className={classNames(
-                      item.current ? 'bg-gray-100 text-gray-900' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900',
-                      'group flex items-center px-2 py-2 text-sm font-medium rounded-md'
+                      item.current
+                        ? "bg-gray-100 text-gray-900"
+                        : "text-gray-600 hover:bg-gray-50 hover:text-gray-900",
+                      "group flex items-center px-2 py-2 text-sm font-medium rounded-md"
                     )}
                   >
                     <item.icon
                       className={classNames(
-                        item.current ? 'text-gray-500' : 'text-gray-400 group-hover:text-gray-500',
-                        'mr-3 flex-shrink-0 h-6 w-6'
+                        item.current
+                          ? "text-gray-500"
+                          : "text-gray-400 group-hover:text-gray-500",
+                        "mr-3 flex-shrink-0 h-6 w-6"
                       )}
                       aria-hidden="true"
                     />
@@ -175,8 +199,12 @@ const Page = ({ page, navigation, settings }) => {
                     />
                   </div>
                   <div className="ml-3">
-                    <p className="text-sm font-medium text-gray-700 group-hover:text-gray-900">Tim Cook</p>
-                    <p className="text-xs font-medium text-gray-500 group-hover:text-gray-700">View profile</p>
+                    <p className="text-sm font-medium text-gray-700 group-hover:text-gray-900">
+                      Tim Cook
+                    </p>
+                    <p className="text-xs font-medium text-gray-500 group-hover:text-gray-700">
+                      View profile
+                    </p>
                   </div>
                 </div>
               </a>
@@ -204,18 +232,18 @@ const Page = ({ page, navigation, settings }) => {
         </div>
       </div>
     </>
-  )
-}
-export default Page
+  );
+};
+export default Page;
 
 export async function getStaticProps({ previewData }) {
-  const client = createClient({ previewData })
+  const client = createClient({ previewData });
 
-  const page = await client.getSingle('homepage')
+  const page = await client.getSingle("homepage");
 
   return {
     props: {
       page,
     },
-  }
+  };
 }
