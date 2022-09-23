@@ -6,6 +6,7 @@ import { components as docComponents } from "../../slices/docs";
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Link from 'next/link'
 
 import { mainNavigation, classNames } from "../index";
 
@@ -69,11 +70,13 @@ const Page = ({ page, navigation, settings }) => {
                   </Transition.Child>
                   <div className="h-0 flex-1 overflow-y-auto pt-5 pb-4">
                     <div className="flex flex-shrink-0 items-center px-4">
-                      <img
-                        className="h-8 w-auto"
-                        src="/klaviyo.svg?color=indigo&shade=600"
-                        alt="Klaviyo"
-                      />
+                      <Link href="/">
+                        <img
+                          className="h-8 w-auto"
+                          src="/klaviyo.svg?color=indigo&shade=600"
+                          alt="Klaviyo"
+                        />
+                      </Link>
                     </div>
                     <nav className="mt-5 space-y-1 px-2">
                       {mainNavigation.map((item) => (
@@ -137,11 +140,13 @@ const Page = ({ page, navigation, settings }) => {
           <div className="flex min-h-0 flex-1 flex-col border-r border-gray-200 bg-white">
             <div className="flex flex-1 flex-col overflow-y-auto pt-5 pb-4">
               <div className="flex flex-shrink-0 items-center px-4">
-                <img
-                  className="h-8 w-auto"
-                  src="/klaviyo.svg?color=indigo&shade=600"
-                  alt="Klaviyo"
-                />
+                <Link href="/">
+                  <img
+                    className="h-8 w-auto"
+                    src="/klaviyo.svg?color=indigo&shade=600"
+                    alt="Klaviyo"
+                  />
+                </Link>
               </div>
               <nav className="mt-5 flex-1 space-y-1 bg-white px-2">
                 {mainNavigation.map((item) => (
