@@ -72,8 +72,7 @@
   },
   "_cts": {
     "homepage": {},
-    "documentation_page": {},
-    "main_header": {}
+    "documentation_page": {}
   },
   "slices/docs": {
     "ComponentAnatomy": {
