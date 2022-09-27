@@ -1,31 +1,14 @@
 import { SliceZone } from "@prismicio/react";
-import { createClient } from "../prismicio";
-import { components } from "../slices";
+import * as prismicH from "@prismicio/helpers";
+import { createClient, linkResolver } from "../../prismicio";
+import { components } from "../../slices";
+import { components as docComponents } from "../../slices/docs";
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import {
-  Bars3Icon,
-  CubeIcon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from 'next/link'
 
-// Hardcoded navigation, for now
-export const mainNavigation = [
-  {
-    name: "Figma Plugins",
-    href: "/docs/figma-plugins",
-    icon: CubeIcon,
-    current: false,
-  },
-  { name: "Checkbox", href: "/docs/checkbox", icon: CubeIcon, current: false },
-  { name: "ListMenu", href: "/components/listmenu", icon: CubeIcon, current: false },
-];
-
-// Hardcoded classNames join, for now
-export function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
+import { mainNavigation, classNames } from "../index";
 
 const Page = ({ page, navigation, settings }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -228,7 +211,13 @@ const Page = ({ page, navigation, settings }) => {
           <main className="flex-1">
             <div className="py-6">
               <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 prose">
-                <SliceZone slices={page.data.slices} components={components} />
+                <SliceZone
+                  slices={page.data.slices}
+                  components={{
+                    ...components,
+                    ...docComponents,
+                  }}
+                />
               </div>
             </div>
           </main>
@@ -239,14 +228,28 @@ const Page = ({ page, navigation, settings }) => {
 };
 export default Page;
 
-export async function getStaticProps({ previewData }) {
+export async function getStaticProps({ params, previewData }) {
   const client = createClient({ previewData });
 
-  const page = await client.getSingle("homepage");
+  const { uid, lang } = params;
+
+  // Ensure route is set up correctly in prismicio.js
+  const page = await client.getByUID("components", uid, { lang });
 
   return {
     props: {
       page,
     },
+  };
+}
+
+export async function getStaticPaths() {
+  const client = createClient();
+
+  const pages = await client.getAllByType("components");
+
+  return {
+    paths: pages.map((page) => prismicH.asLink(page, linkResolver)),
+    fallback: false,
   };
 }

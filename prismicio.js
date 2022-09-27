@@ -18,9 +18,11 @@ export function linkResolver(doc) {
   switch (doc.type) {
     case 'homepage':
       return '/'
-      // Components — Looking to change this to `components` but not sure: https://community.prismic.io/t/change-custom-type-2022/11192
+      // @deprecated Migrate all pages to `components` custom type
     case 'documentation_page':
       return `/docs/${doc.uid}`
+    case 'components':
+      return `/components/${doc.uid}`
     default:
       return null
   }
