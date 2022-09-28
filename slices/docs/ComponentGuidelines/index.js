@@ -1,5 +1,6 @@
 import React from 'react';
 import { PrismicRichText } from '@prismicio/react';
+import { classNames } from '../../../pages/index';
 
 const ComponentGuidelines = ({ slice }) => {
   // If there is only one item, resize the container to half width
@@ -24,14 +25,14 @@ const ComponentGuidelines = ({ slice }) => {
             />
 
             <div
-              className={[
+              className={classNames(
                 item.type === 'positive'
                   ? 'border-green-700 bg-green-100'
                   : 'border-red-700 bg-red-100',
                 'border-t-8',
                 'p-6',
-                'grow',
-              ].join(' ')}
+                'grow'
+              )}
             >
               <p className='font-bold mb-2 mt-0'>{item.header}</p>
               <p className='mt-0 mb-1'>{item.description}</p>
