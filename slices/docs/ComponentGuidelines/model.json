@@ -25,6 +25,15 @@
             "label": "Description",
             "placeholder": "A nice description of your feature"
           }
+        },
+        "row": {
+          "type": "Boolean",
+          "config": {
+            "label": "Single guideline per row",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": false
+          }
         }
       },
       "items": {
@@ -33,10 +42,7 @@
           "config": {
             "label": "Type",
             "placeholder": "",
-            "options": [
-              "positive",
-              "negative"
-            ],
+            "options": ["positive", "negative"],
             "default_value": "positive"
           }
         },

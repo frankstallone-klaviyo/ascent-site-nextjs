@@ -12,21 +12,22 @@
           },
           "alt": null,
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055"
+          "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e"
         },
-        "header": "slide",
-        "description": "round"
+        "header": "manufacturing",
+        "description": "winter"
       }
     ],
     "primary": {
-      "title": "introduced",
+      "title": "space",
       "description": [
         {
           "type": "paragraph",
-          "text": "Officia duis laboris Lorem amet veniam laborum esse.",
+          "text": "Esse tempor quis ut est nisi.",
           "spans": []
         }
-      ]
+      ],
+      "row": true
     },
     "slice_type": "component_guidelines"
   }
