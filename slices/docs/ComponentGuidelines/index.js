@@ -1,6 +1,7 @@
 import React from 'react';
 import { PrismicRichText } from '@prismicio/react';
 import { classNames } from '../../../pages/index';
+import { CheckIcon, NoSymbolIcon } from '@heroicons/react/24/outline';
 
 const ComponentGuidelines = ({ slice }) => {
   // If there is only one item, resize the container to half width
@@ -30,10 +31,19 @@ const ComponentGuidelines = ({ slice }) => {
                   ? 'border-green-700 bg-green-100'
                   : 'border-red-700 bg-red-100',
                 'border-t-8',
-                'p-6',
-                'grow'
+                'px-6',
+                'pt-6',
+                'pb-8',
+                'lg:pb-12',
+                'grow',
+                'relative'
               )}
             >
+              {item.type === 'positive' ? (
+                <CheckIcon className='text-green-400 w-6 lg:w-8 absolute bottom-3 right-3' />
+              ) : (
+                <NoSymbolIcon className='text-red-400 w-6 lg:w-8 absolute bottom-3 right-3' />
+              )}
               <p className='font-bold mb-2 mt-0'>{item.header}</p>
               <p className='mt-0 mb-1'>{item.description}</p>
             </div>
