@@ -22,6 +22,7 @@ const ComponentGuidelines = ({ slice }) => {
           return (
             <div
               className={`flex flex-col bg-white rounded-2xl overflow-hidden ${singleItemClassName}`}
+              key={i}
             >
               <img
                 src={item.image.url}
