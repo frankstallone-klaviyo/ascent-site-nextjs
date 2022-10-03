@@ -1,0 +1,3 @@
+# Ignore slicemachine artifacts
+
+.slicemachine/assets/libraries-state.json
