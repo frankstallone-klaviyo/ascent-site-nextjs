@@ -200,7 +200,9 @@
           "default": {
             "variation": "default",
             "version": "sktwi1xtmkfgx8626",
-            "items": [{}],
+            "items": [
+              {}
+            ],
             "primary": {
               "heading": [
                 {
@@ -340,7 +342,9 @@
           "default": {
             "variation": "default",
             "version": "sktwi1xtmkfgx8626",
-            "items": [{}],
+            "items": [
+              {}
+            ],
             "primary": {
               "Image": {
                 "dimensions": {
@@ -464,7 +468,9 @@
           "default": {
             "variation": "default",
             "version": "sktwi1xtmkfgx8626",
-            "items": [{}],
+            "items": [
+              {}
+            ],
             "primary": {
               "header": [
                 {
@@ -613,7 +619,10 @@
                   "config": {
                     "label": "Type",
                     "placeholder": "",
-                    "options": ["positive", "negative"],
+                    "options": [
+                      "positive",
+                      "negative"
+                    ],
                     "default_value": "positive"
                   }
                 },
