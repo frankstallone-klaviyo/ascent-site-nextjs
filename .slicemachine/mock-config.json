@@ -97,7 +97,8 @@
     },
     "FoundationsFontStack": {
       "default": {
-        "primary": {}
+        "primary": {},
+        "items": {}
       }
     }
   }

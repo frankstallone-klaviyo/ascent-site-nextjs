@@ -29,6 +29,9 @@
             },
             "heading": {
               "type": "SharedSlice"
+            },
+            "foundations_font_stack": {
+              "type": "SharedSlice"
             }
           }
         }
