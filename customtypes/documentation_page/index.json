@@ -4,7 +4,7 @@
   "repeatable": true,
   "status": true,
   "json": {
-    "Main": {
+    "Deprecated": {
       "page_title": {
         "type": "StructuredText",
         "config": {

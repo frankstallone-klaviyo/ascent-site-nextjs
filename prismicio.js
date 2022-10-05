@@ -1,12 +1,12 @@
-import * as prismic from '@prismicio/client'
-import * as prismicH from '@prismicio/helpers'
-import * as prismicNext from '@prismicio/next'
-import sm from './sm.json'
+import * as prismic from '@prismicio/client';
+import * as prismicH from '@prismicio/helpers';
+import * as prismicNext from '@prismicio/next';
+import sm from './sm.json';
 
 /**
  * The project's Prismic repository name.
  */
-export const repositoryName = prismic.getRepositoryName(sm.apiEndpoint)
+export const repositoryName = prismic.getRepositoryName(sm.apiEndpoint);
 
 /**
  * The project's Prismic Link Resolver. This function determines the URL for a given Prismic document.
@@ -17,14 +17,16 @@ export const repositoryName = prismic.getRepositoryName(sm.apiEndpoint)
 export function linkResolver(doc) {
   switch (doc.type) {
     case 'homepage':
-      return '/'
-      // @deprecated Migrate all pages to `components` custom type
+      return '/';
+    // @deprecated Migrate all pages to `components` custom type
     case 'documentation_page':
-      return `/docs/${doc.uid}`
+      return `/docs/${doc.uid}`;
     case 'components':
-      return `/components/${doc.uid}`
+      return `/components/${doc.uid}`;
+    case 'foundations':
+      return `/foundations/${doc.uid}`;
     default:
-      return null
+      return null;
   }
 }
 
@@ -35,13 +37,13 @@ export function linkResolver(doc) {
  * @param config {prismicNext.CreateClientConfig} - Configuration for the Prismic client.
  */
 export const createClient = (config = {}) => {
-  const client = prismic.createClient(sm.apiEndpoint, config)
+  const client = prismic.createClient(sm.apiEndpoint, config);
 
   prismicNext.enableAutoPreviews({
     client,
     previewData: config.previewData,
     req: config.req,
-  })
+  });
 
-  return client
-}
+  return client;
+};

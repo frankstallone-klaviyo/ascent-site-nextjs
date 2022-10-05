@@ -73,7 +73,8 @@
   "_cts": {
     "homepage": {},
     "documentation_page": {},
-    "components": {}
+    "components": {},
+    "foundations": {}
   },
   "slices/docs": {
     "ComponentAnatomy": {
