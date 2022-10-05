@@ -1,0 +1,42 @@
+{
+  "id": "foundations_font_stack",
+  "type": "SharedSlice",
+  "name": "FoundationsFontStack",
+  "description": "FoundationsFontStack",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "FoundationsFontStack",
+      "primary": {
+        "stack_name": {
+          "type": "Text",
+          "config": {
+            "label": "Stack name",
+            "placeholder": ""
+          }
+        },
+        "stack_application": {
+          "type": "Text",
+          "config": {
+            "label": "Stack application",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "stack_image": {
+          "type": "Image",
+          "config": {
+            "label": "Stack image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

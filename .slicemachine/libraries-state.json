@@ -784,6 +784,83 @@
           "extension": "js"
         },
         "screenshotPaths": {}
+      },
+      "foundations_font_stack": {
+        "library": "slices/docs",
+        "id": "foundations_font_stack",
+        "name": "FoundationsFontStack",
+        "description": "FoundationsFontStack",
+        "model": {
+          "id": "foundations_font_stack",
+          "type": "SharedSlice",
+          "name": "FoundationsFontStack",
+          "description": "FoundationsFontStack",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "FoundationsFontStack",
+              "primary": {
+                "stack_name": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Stack name",
+                    "placeholder": ""
+                  }
+                },
+                "stack_application": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Stack application",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {
+                "stack_image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Stack image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "stack_image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117"
+                }
+              }
+            ],
+            "primary": {
+              "stack_name": "suddenly",
+              "stack_application": "character"
+            },
+            "slice_type": "foundations_font_stack"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
       }
     }
   },

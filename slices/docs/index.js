@@ -3,15 +3,18 @@
 import ComponentAnatomy from './ComponentAnatomy';
 import ComponentGuidelines from './ComponentGuidelines';
 import ComponentVariant from './ComponentVariant';
+import FoundationsFontStack from './FoundationsFontStack';
 
 export {
-	ComponentAnatomy,
-	ComponentGuidelines,
-	ComponentVariant,
+  ComponentAnatomy,
+  ComponentGuidelines,
+  ComponentVariant,
+  FoundationsFontStack,
 };
 
 export const components = {
-	component_anatomy: ComponentAnatomy,
-	component_guidelines: ComponentGuidelines,
-	component_variant: ComponentVariant,
+  component_anatomy: ComponentAnatomy,
+  component_guidelines: ComponentGuidelines,
+  component_variant: ComponentVariant,
+  foundations_font_stack: FoundationsFontStack,
 };

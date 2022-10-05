@@ -94,6 +94,11 @@
         "items": {},
         "primary": {}
       }
+    },
+    "FoundationsFontStack": {
+      "default": {
+        "primary": {}
+      }
     }
   }
 }

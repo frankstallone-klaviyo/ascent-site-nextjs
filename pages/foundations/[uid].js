@@ -116,7 +116,7 @@ const Page = ({ page, navigation, settings }) => {
                         </div>
                         <div className='ml-3'>
                           <p className='text-base font-medium text-gray-700 group-hover:text-gray-900'>
-                            Tim Cook
+                            Tim Apple
                           </p>
                           <p className='text-sm font-medium text-gray-500 group-hover:text-gray-700'>
                             View profile
