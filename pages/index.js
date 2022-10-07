@@ -5,6 +5,7 @@ import { Fragment, useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { Bars3Icon, CubeIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
+import { classNames } from '../utils';
 
 // Hardcoded navigation, for now
 export const mainNavigation = [
