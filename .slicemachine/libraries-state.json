@@ -721,9 +721,10 @@
                 "description": {
                   "type": "StructuredText",
                   "config": {
-                    "single": "paragraph",
                     "label": "Description",
-                    "placeholder": "A nice description of your feature"
+                    "placeholder": "A nice description of your feature",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph"
                   }
                 }
               },
@@ -754,7 +755,7 @@
             "version": "sktwi1xtmkfgx8626",
             "items": [
               {
-                "variant_name": "two",
+                "variant_name": "atmosphere",
                 "variant_image": {
                   "dimensions": {
                     "width": 900,
@@ -762,16 +763,16 @@
                   },
                   "alt": null,
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f"
+                  "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1"
                 }
               }
             ],
             "primary": {
-              "variant_name": "load",
+              "variant_name": "married",
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Amet ipsum tempor sit consequat dolore irure et reprehenderit ipsum. Excepteur Lorem et sit anim nisi anim ut adipisicing minim proident sit dolor magna culpa nisi.",
+                  "text": "Aliquip anim aliqua adipisicing officia enim. Deserunt do nisi sit in sint enim duis.",
                   "spans": []
                 }
               ]

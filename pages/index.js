@@ -27,6 +27,12 @@ export const mainNavigation = [
     icon: CubeIcon,
     current: false,
   },
+  {
+    name: 'Typography',
+    href: '/foundations/typography',
+    icon: CubeIcon,
+    current: false,
+  },
 ];
 
 // Hardcoded classNames join, for now

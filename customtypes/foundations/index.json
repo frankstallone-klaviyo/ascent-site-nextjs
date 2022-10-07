@@ -32,6 +32,15 @@
             },
             "foundations_font_stack": {
               "type": "SharedSlice"
+            },
+            "component_anatomy": {
+              "type": "SharedSlice"
+            },
+            "component_guidelines": {
+              "type": "SharedSlice"
+            },
+            "component_variant": {
+              "type": "SharedSlice"
             }
           }
         }
