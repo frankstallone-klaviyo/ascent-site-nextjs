@@ -7,11 +7,6 @@ const Heading = ({ slice }) => (
     <PrismicRichText
       field={slice.primary.heading}
       components={{
-        heading1: ({ children }) => (
-          <h1 id={`#${pageElementAnchor(slice.primary.heading[0].text)}`}>
-            {children}
-          </h1>
-        ),
         heading2: ({ children }) => (
           <h2 id={`#${pageElementAnchor(slice.primary.heading[0].text)}`}>
             {children}

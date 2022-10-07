@@ -30,9 +30,7 @@ const getNestedHeadings = (headingElements) => {
   return nestedHeadings;
 };
 
-const Page = ({ page, navigation, settings }) => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
+const useHeadingsData = () => {
   const [nestedHeadings, setNestedHeadings] = useState([]);
 
   useEffect(() => {
@@ -42,7 +40,40 @@ const Page = ({ page, navigation, settings }) => {
     setNestedHeadings(newNestedHeadings);
   }, []);
 
-  console.log(nestedHeadings);
+  return { nestedHeadings };
+};
+
+const Headings = ({ headings }) => (
+  <ul>
+    {headings.map((heading) => (
+      <li key={heading.id}>
+        <a href={`${heading.id}`}>{heading.title}</a>
+        {heading.items.length > 0 && (
+          <ul>
+            {heading.items.map((child, i) => (
+              <li key={`${child.id}-${i}`}>
+                <a href={`${child.id}`}>{child.title}</a>
+              </li>
+            ))}
+          </ul>
+        )}
+      </li>
+    ))}
+  </ul>
+);
+
+const TableOfContents = () => {
+  const { nestedHeadings } = useHeadingsData();
+
+  return (
+    <nav aria-label='Table of contents'>
+      <Headings headings={nestedHeadings} />
+    </nav>
+  );
+};
+
+const Page = ({ page, navigation, settings }) => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <>
@@ -242,6 +273,7 @@ const Page = ({ page, navigation, settings }) => {
           <main className='flex-1'>
             <div className='py-6'>
               <div className='mx-auto max-w-7xl px-4 sm:px-6 md:px-8 prose'>
+                <TableOfContents />
                 <SliceZone
                   slices={page.data.slices}
                   components={{
