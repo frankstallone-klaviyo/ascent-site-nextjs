@@ -1,6 +1,6 @@
 import React from 'react';
 import { PrismicRichText } from '@prismicio/react';
-import { classNames } from '../../../pages/index';
+import { classNames } from '../../../utils';
 import { CheckIcon, NoSymbolIcon } from '@heroicons/react/24/outline';
 
 const ComponentGuidelines = ({ slice }) => {

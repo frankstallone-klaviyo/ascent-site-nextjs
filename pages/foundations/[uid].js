@@ -3,15 +3,46 @@ import * as prismicH from '@prismicio/helpers';
 import { createClient, linkResolver } from '../../prismicio';
 import { components } from '../../slices';
 import { components as docComponents } from '../../slices/docs';
-import { Fragment, useState } from 'react';
+import { Fragment, useState, useEffect } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 
-import { mainNavigation, classNames } from '../index';
+import { mainNavigation } from '../index';
+import { classNames } from '../../utils';
+
+const getNestedHeadings = (headingElements) => {
+  const nestedHeadings = [];
+
+  headingElements.forEach((heading, index) => {
+    const { innerText: title, id } = heading;
+
+    if (heading.nodeName === 'H2') {
+      nestedHeadings.push({ id, title, items: [] });
+    } else if (heading.nodeName === 'H3' && nestedHeadings.length > 0) {
+      nestedHeadings[nestedHeadings.length - 1].items.push({
+        id,
+        title,
+      });
+    }
+  });
+
+  return nestedHeadings;
+};
 
 const Page = ({ page, navigation, settings }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const [nestedHeadings, setNestedHeadings] = useState([]);
+
+  useEffect(() => {
+    const headingElements = Array.from(document.querySelectorAll('h2, h3'));
+
+    const newNestedHeadings = getNestedHeadings(headingElements);
+    setNestedHeadings(newNestedHeadings);
+  }, []);
+
+  console.log(nestedHeadings);
 
   return (
     <>

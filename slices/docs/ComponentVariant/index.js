@@ -1,9 +1,15 @@
 import React from 'react';
 import { PrismicRichText } from '@prismicio/react';
+import { pageElementAnchor } from '../../../utils';
 
 const ComponentVariant = ({ slice }) => (
   <section className='xl:bg-slate-100 xl:rounded-3xl xl:p-8 mb-12'>
-    <h3 className='mt-0'>{slice.primary.variant_name}</h3>
+    <h3
+      className='mt-0'
+      id={`#${pageElementAnchor(slice.primary.variant_name)}`}
+    >
+      {slice.primary.variant_name}
+    </h3>
 
     <PrismicRichText field={slice.primary.description} />
 

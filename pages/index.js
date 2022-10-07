@@ -35,11 +35,6 @@ export const mainNavigation = [
   },
 ];
 
-// Hardcoded classNames join, for now
-export function classNames(...classes) {
-  return classes.filter(Boolean).join(' ');
-}
-
 const Page = ({ page, navigation, settings }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
