@@ -6,7 +6,7 @@ const ComponentVariant = ({ slice }) => (
   <section className='xl:bg-slate-100 xl:rounded-3xl xl:p-8 mb-12'>
     <h3
       className='mt-0'
-      id={`#${pageElementAnchor(slice.primary.variant_name)}`}
+      id={`${pageElementAnchor(slice.primary.variant_name)}`}
     >
       {slice.primary.variant_name}
     </h3>

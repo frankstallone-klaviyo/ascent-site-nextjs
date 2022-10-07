@@ -10,7 +10,7 @@ const RichText = ({ slice }) => {
         components={{
           heading2: ({ children }) => (
             <h2
-              id={`#${pageElementAnchor(
+              id={`${pageElementAnchor(
                 children[0].props.children[0].props.children
               )}`}
             >
@@ -19,7 +19,7 @@ const RichText = ({ slice }) => {
           ),
           heading3: ({ children }) => (
             <h3
-              id={`#${pageElementAnchor(
+              id={`${pageElementAnchor(
                 children[0].props.children[0].props.children
               )}`}
             >

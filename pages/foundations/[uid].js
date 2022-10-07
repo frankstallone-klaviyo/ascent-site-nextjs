@@ -11,6 +11,7 @@ import Link from 'next/link';
 import { mainNavigation } from '../index';
 import { classNames } from '../../utils';
 
+// Experimenting with a table of contents section for different pages.
 const getNestedHeadings = (headingElements) => {
   const nestedHeadings = [];
 

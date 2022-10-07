@@ -8,12 +8,12 @@ const Heading = ({ slice }) => (
       field={slice.primary.heading}
       components={{
         heading2: ({ children }) => (
-          <h2 id={`#${pageElementAnchor(slice.primary.heading[0].text)}`}>
+          <h2 id={`${pageElementAnchor(slice.primary.heading[0].text)}`}>
             {children}
           </h2>
         ),
         heading3: ({ children }) => (
-          <h3 id={`#${pageElementAnchor(slice.primary.heading[0].text)}`}>
+          <h3 id={`${pageElementAnchor(slice.primary.heading[0].text)}`}>
             {children}
           </h3>
         ),
