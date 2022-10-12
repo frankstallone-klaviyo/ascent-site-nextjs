@@ -3,75 +3,14 @@ import * as prismicH from '@prismicio/helpers';
 import { createClient, linkResolver } from '../../prismicio';
 import { components } from '../../slices';
 import { components as docComponents } from '../../slices/docs';
-import { Fragment, useState, useEffect } from 'react';
+import { Fragment, useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 
 import { mainNavigation } from '../index';
 import { classNames } from '../../utils';
-
-// Experimenting with a table of contents section for different pages.
-const getNestedHeadings = (headingElements) => {
-  const nestedHeadings = [];
-
-  headingElements.forEach((heading, index) => {
-    const { innerText: title, id } = heading;
-
-    if (heading.nodeName === 'H2') {
-      nestedHeadings.push({ id, title, items: [] });
-    } else if (heading.nodeName === 'H3' && nestedHeadings.length > 0) {
-      nestedHeadings[nestedHeadings.length - 1].items.push({
-        id,
-        title,
-      });
-    }
-  });
-
-  return nestedHeadings;
-};
-
-const useHeadingsData = () => {
-  const [nestedHeadings, setNestedHeadings] = useState([]);
-
-  useEffect(() => {
-    const headingElements = Array.from(document.querySelectorAll('h2, h3'));
-
-    const newNestedHeadings = getNestedHeadings(headingElements);
-    setNestedHeadings(newNestedHeadings);
-  }, []);
-
-  return { nestedHeadings };
-};
-
-const Headings = ({ headings }) => (
-  <ul>
-    {headings.map((heading) => (
-      <li key={heading.id}>
-        <a href={`#${heading.id}`}>{heading.title}</a>
-        {heading.items.length > 0 && (
-          <ul>
-            {heading.items.map((child, i) => (
-              <li key={`${child.id}-${i}`}>
-                <a href={`#${child.id}`}>{child.title}</a>
-              </li>
-            ))}
-          </ul>
-        )}
-      </li>
-    ))}
-  </ul>
-);
-
-const TableOfContents = () => {
-  const { nestedHeadings } = useHeadingsData();
-
-  return (
-    <nav aria-label='Table of contents'>
-      <Headings headings={nestedHeadings} />
-    </nav>
-  );
-};
+import { TableOfContents } from '../../components';
 
 const Page = ({ page, navigation, settings }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
