@@ -13,9 +13,12 @@ const ComponentVariant = ({ slice }) => (
 
     <PrismicRichText field={slice.primary.description} />
 
-    <ul className='flex list-none gap-2 p-0 m-0'>
+    <ul className='flex list-none gap-2 p-0 my-2 flex-wrap'>
       {slice?.items?.map((item, i) => (
-        <li className='rounded-full bg-slate-700 text-white px-4 py-1' key={i}>
+        <li
+          className='rounded-full bg-slate-700 text-white px-4 py-1 mb-0'
+          key={i}
+        >
           {item.variant_name}
         </li>
       ))}
